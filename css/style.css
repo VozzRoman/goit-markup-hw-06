@@ -393,10 +393,13 @@ body {
 .main-button:hover {
   background-color: var(--hover-big-button);
   box-shadow: 0px 4px 4px 0px #00000026;
+
 }
 .form-chackbox-button{
 	padding: 10px 55px 10px 56px;
 	line-height: 1.87;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
 }
 
 .button {

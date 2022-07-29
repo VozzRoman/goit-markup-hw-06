@@ -89,10 +89,17 @@ img{
 	border-radius: 50%;
 	background-color: transparent;
 	border: 1px solid hsla(0, 0%, 0%, 0.1);
-
+	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-icon{
 	fill: currentColor;
+	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.madal-close-button:hover,
+.madal-close-button:focus {
+	border: 1px solid var(--hover-color);
+	outline: transparent;
 }
 .madal-close-button:hover .modal-close-icon{
 	fill:var(--hover-color);
@@ -122,6 +129,7 @@ img{
 
 .modal-form-input,
  .modal-form-textar{
+	cursor: pointer;
 	display: block;
 	width: 100%;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -131,6 +139,8 @@ img{
 	transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	outline: transparent;
 }
+.modal-form-textar:hover,
+.modal-form-input:hover,
 .modal-form-textar:focus,
 .modal-form-input:focus{
 	border: 1px solid #2196F3;
@@ -193,6 +203,7 @@ img{
 	margin-bottom: 30px;
 }
 .form-chackbox-icon{
+	cursor: pointer;
 	width: 16px;
 	height: 15px;
 	fill: var(--seconadary-text-color);
@@ -210,10 +221,12 @@ img{
 	fill: var(--seconadary-text-color);
 	background: var(--hover-color);
 	border: 2px solid var(--hover-color);
-	border-radius: 2px;
-	
-
 }
+.form-chackbox-icon:hover,
+.input-form-chackbox:focus + .form-chackbox-icon {
+	border: 2px solid var(--hover-color);
+}
+
 .form-chackbox-text {
 	color: var(--artical-color-text);
 	line-height: 1.7;
@@ -485,7 +498,11 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
+	min-height: 70px;
 	background-color: hsla(235, 10%, 21%, 0.8);
 	font-weight: 700;
 	color: var(--seconadary-text-color);
@@ -494,7 +511,7 @@ body {
 	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	padding: 27px 0;
+	
 
 
 }
